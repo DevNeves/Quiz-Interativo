@@ -28,15 +28,15 @@ const userCorrectAsnwers = event => {
         if (asnwer === correctAsnwers[i]){
            points += 1
         }
-        
-        insertPoints(`Você acertou ${points}/5 perguntas!`)
-
-        if (points === 0) {
-            insertPoints(`Você acertou nenhuma das 5 perguntas )=`)
-        }
     }
-
+    
     asnwers().forEach(isACorrectAsnwers)
+    
+    insertPoints(`Você acertou ${points}/5 perguntas!`)
+
+    if (points === 0) {
+       insertPoints(`Você acertou nenhuma das 5 perguntas )=`)
+    }
 }
 
 form.addEventListener('submit' , userCorrectAsnwers)
