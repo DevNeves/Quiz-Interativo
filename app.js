@@ -1,42 +1,61 @@
-
 const form = document.querySelector('form')
-const showPoints = document.querySelector('.show-points')
-const correctAsnwers = ['B', 'A', 'B', 'A', 'A']
+const finalScoreContainer = document.querySelector('.final-score-container')
 
-const asnwers = ( ) =>  {
-    const userAsnwers = [
-    form.inputQuestion1.value,
-    form.inputQuestion2.value,
-    form.inputQuestion3.value,
-    form.inputQuestion4.value,
-    form.inputQuestion5.value,
-    ]
+const correctAnswers = ['B', 'A', 'D', 'C', 'A']
 
-    return userAsnwers
+let score = 0
+
+const getUserAnswers = () => {
+  const userAnswers = []
+
+  correctAnswers.forEach((_, index) => {
+   const userAnswer = form[`inputQuestion${index + 1}`].value
+   userAnswers.push(userAnswer)   
+  })
+  
+  return userAnswers
 }
 
-const insertPoints = (text) => {
-    showPoints.textContent = `${text}`
-}
-
-const userCorrectAsnwers = event => {
-    event.preventDefault()
-
-    let points = 0
-
-    const isACorrectAsnwers = (asnwer, i) => {
-        if (asnwer === correctAsnwers[i]){
-           points += 1
-        }
+const validateUserAnswers = userAnswers => {
+  correctAnswers.forEach((correctAnswer, index) => {
+    if (correctAnswer === userAnswers[index]) {
+      score++
     }
-    
-    asnwers().forEach(isACorrectAsnwers)
-    
-    insertPoints(`Você acertou ${points}/5 perguntas!`)
-
-    if (points === 0) {
-       insertPoints(`Você acertou nenhuma das 5 perguntas )=`)
-    }
+  })
 }
 
-form.addEventListener('submit' , userCorrectAsnwers)
+const showFinalScore = () => {
+  scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  })
+
+  finalScoreContainer.classList.remove('d-none')
+}
+
+const animatedFinalScore = () => {
+  let counter = 0
+  
+  const timer = setInterval(() => {
+    if (counter === score) {
+      clearInterval(timer)
+    }
+
+    document.querySelector('span').textContent = `${counter++}/5`
+    
+  },120)
+}
+
+const handleFormSubmit = event => {
+  event.preventDefault()
+  score = 0
+
+  const userAnswers = getUserAnswers()
+  
+  validateUserAnswers(userAnswers)
+  showFinalScore()
+  animatedFinalScore()
+}
+
+form.addEventListener('submit' , handleFormSubmit)
