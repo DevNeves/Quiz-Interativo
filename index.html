@@ -13,16 +13,26 @@
     </div>
   </div>
 
+  <div class="final-score-container py-4 bg-light text-center d-none">
+    <div class="container lead">
+      <p>Você acertou
+        <span class="text-primary display-4 p-2">0/5</span>
+        perguntas
+      </p>
+    </div>
+  </div>
+
+
   <div class="quiz py-4 bg-warning ">
     <div class="container">
-      <h2 class="my-5 text-primary-emphasis">Você consegue acertar o cantor pelo nome da música ? </h2>
+      <h2 class="my-4 text-primary-emphasis">Você consegue acertar o cantor pelo nome da música ? </h2>
 
       <form class="quiz-form text-secondary-emphasis">
         <div class="my-5">
           <p class="lead font-weight-normal">1. A música "No dia em que saí de casa" é interpretada por qual dupla ?:</p>
           <div class="form-check my-2 text-success-emphasis">
             <label class="form-check-label">
-              <input type="radio" name="inputQuestion1" value="A">
+              <input type="radio" name="inputQuestion1" value="A" checked>
               Chitãozinho & Xororó
             </label>
           </div>
@@ -32,13 +42,25 @@
               Zezé Di Camargo & Luciano
             </label>
           </div>
+          <div class="form-check my-2 text-success-emphasis">
+            <label class="form-check-label">
+              <input type="radio" name="inputQuestion1" value="C">
+              Leandro e Leonardo
+            </label>
+          </div>
+          <div class="form-check my-2 text-success-emphasis">
+            <label class="form-check-label">
+              <input type="radio" name="inputQuestion1" value="D">
+              Cezar Menotti e Fabiano
+            </label>
+          </div>
         </div>
 
         <div class="my-5">
           <p class="lead font-weight-normal">2. "Dormi na praça" é um sucesso da dupla:</p>
           <div class="form-check my-2 text-success-emphasis">
             <label class="form-check-label">
-              <input type="radio" name="inputQuestion2" value="A">
+              <input type="radio" name="inputQuestion2" value="A" checked>
               Bruno e Marrone
             </label>
           </div>
@@ -48,19 +70,43 @@
               Mato Grosso e Mathias
             </label>
           </div>
+          <div class="form-check my-2 text-success-emphasis">
+            <label class="form-check-label">
+              <input type="radio" name="inputQuestion2" value="C">
+              Jads e Jadson
+            </label>
+          </div>
+          <div class="form-check my-2 text-success-emphasis">
+            <label class="form-check-label">
+              <input type="radio" name="inputQuestion2" value="D">
+              Edson e Hudson
+            </label>
+          </div>
         </div>
 
         <div class="my-5">
           <p class="lead font-weight-normal">3. A música "Coração Aberto" foi composta e interpretada por:</p>
           <div class="form-check my-2 text-success-emphasis"> 
             <label class="form-check-label">
-              <input type="radio" name="inputQuestion3" value="A">
+              <input type="radio" name="inputQuestion3" value="A" checked>
               Daniel
             </label>
           </div>
           <div class="form-check my-2 text-success-emphasis">
             <label class="form-check-label">
               <input type="radio" name="inputQuestion3" value="B">
+              Almir Sater
+            </label>
+          </div>
+          <div class="form-check my-2 text-success-emphasis">
+            <label class="form-check-label">
+              <input type="radio" name="inputQuestion3" value="C">
+              Leonardo
+            </label>
+          </div>
+          <div class="form-check my-2 text-success-emphasis">
+            <label class="form-check-label">
+              <input type="radio" name="inputQuestion3" value="D">
               Eduardo Costa
             </label>
           </div>
@@ -70,8 +116,8 @@
           <p class="lead font-weight-normal">4. "Borboletas" foi um dos maiores sucessos da extinta dupla:</p>
           <div class="form-check my-2 text-success-emphasis">
             <label class="form-check-label">
-              <input type="radio" name="inputQuestion4" value="A">
-              Victor e Léo
+              <input type="radio" name="inputQuestion4" value="A" checked>
+              Chitãozinho & Xororó
             </label>
           </div>
           <div class="form-check my-2 text-success-emphasis">
@@ -80,13 +126,25 @@
               Edson e Hudson
             </label>
           </div>
+          <div class="form-check my-2 text-success-emphasis">
+            <label class="form-check-label">
+              <input type="radio" name="inputQuestion4" value="C">
+              Victor e Léo
+            </label>
+          </div>
+          <div class="form-check my-2 text-success-emphasis">
+            <label class="form-check-label">
+              <input type="radio" name="inputQuestion4" value="D">
+              Cleiton e Camargo
+            </label>
+          </div>
         </div>
         
         <div class="my-5">
           <p class="lead font-weight-normal">5. "Estrada da vida" é um clássico sertanejo que fez muito sucesso com:</p>
           <div class="form-check my-2 text-success-emphasis">
             <label class="form-check-label">
-              <input type="radio" name="inputQuestion5" value="A">
+              <input type="radio" name="inputQuestion5" value="A" checked>
               Milionário & José Rico
             </label>
           </div>
@@ -96,10 +154,21 @@
               Rionegro e Solimões
             </label>
           </div>
+          <div class="form-check my-2 text-success-emphasis">
+            <label class="form-check-label">
+              <input type="radio" name="inputQuestion5" value="C">
+              Tião Carreiro e Pardinho
+            </label>
+          </div>
+          <div class="form-check my-2 text-success-emphasis">
+            <label class="form-check-label">
+              <input type="radio" name="inputQuestion5" value="D">
+              Daniel
+            </label>
+          </div>
         </div>
 
         <div class="text-center">
-          <h2 class="show-points"></h2>
           <button class="btn bg-primary text-white">Enviar</button>
         </div>
       </form>
