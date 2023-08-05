@@ -6,9 +6,9 @@ const correctAnswers = ['B', 'A', 'D', 'C', 'A']
 let score = 0
 
 const getUserAnswers = () => {
-  const userAnswers = correctAnswers.map((_, index) => {
-    return form[`inputQuestion${index + 1}`].value
-  })
+  const userAnswers = correctAnswers.map((_, index) => 
+    form[`inputQuestion${index + 1}`].value
+  )
   
   return userAnswers
 }
